@@ -19,9 +19,9 @@ export default function RootNavegation() {
 
 function error() {
     return (
-        <Container>
+       <Container>
             <h1>Error 404</h1>
             <p>Foi mal meu velho! A página não foi encontrada.</p>
-        </Container>
+       </Container>
     );
 }
