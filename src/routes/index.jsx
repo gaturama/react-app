@@ -1,8 +1,9 @@
-import { BrowserRouter } from "react-router-dom";
-import HomeScreen from './../screens/HomeScreen';
-import AlunoScreen from './../screens/AlunoScreen';
-import DisciplinaScreen from './../screens/DisciplinaScreen';
-import ProfessorScreen from './../screens/ProfessorScreen';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import HomeScreen from './../screens/HomeScreen'
+import AlunoScreen from './../screens/AlunoScreen'
+import DisciplinaScreen from './../screens/DisciplinaScreen'
+import ProfessorScreen from './../screens/ProfessorScreen'
+import { Container } from "react-bootstrap"
 
 export default function RootNavegation() {
     return (
