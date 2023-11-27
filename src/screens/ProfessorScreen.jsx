@@ -8,18 +8,19 @@ export default function ProfessorScreen() {
                     </div>
                     <form>
                         <div className="form-group">
-                            <label for="nome">Nome Completo</label>
+                            <label htmlFor="nome">Nome Completo</label>
                             <input type="text" className="form-control" id="nome"/>
                         </div>
                         <div className="form-group">
-                            <label for="disciplina">Disciplina</label>
+                            <label htmlFor="disciplina">Disciplina</label>
                             <input type="text" className="form-control" id="disciplina" />
                         </div>
                         <div className="form-group">
-                            <label for="telefone">Telefone</label>
+                            <label htmlFor="telefone">Telefone</label>
                             <input type="text" className="form-control" id="telefone"/>
                         </div>
                         <div className="form-group">
+                            <label>Enviar</label>
                             <input type="submit" className="btn-success"/>
                         </div>
                     </form>

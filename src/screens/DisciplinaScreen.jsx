@@ -8,14 +8,15 @@ export default function DisciplinaScreen() {
                     </div>
                     <form>
                         <div className="form-group">
-                            <label for="disciplina">Disciplina</label>
+                            <label htmlFor="disciplina">Disciplina</label>
                             <input type="text" className="form-control" id="disciplina" />
                         </div>
                         <div className="form-group">
-                            <label for="nome">Carga horária</label>
+                            <label htmlFor="nome">Carga horária</label>
                             <input type="text" className="form-control" id="carga-horaria"/>
                         </div>
                         <div className="form-group">
+                            <label>Enviar</label>
                             <input type="submit" className="btn-success"/>
                         </div>
                     </form>

@@ -1,7 +1,9 @@
 export default function HomeScreen() {
     return (
-        <>
-            <div className=""></div>
-        </>
+       <header>
+            <div className='container-header'>
+                <h1>Home Scren</h1>
+            </div>
+       </header>
     )
 }
