@@ -1,7 +1,7 @@
 export default function ProfessorScreen() {
     return(
         <>
-            <div className="container-2">
+            <div className="container-prof">
                 <div className="row-2">
                     <div className="col-2">
                         <h2>Cadastro de Professores</h2>

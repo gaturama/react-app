@@ -1,7 +1,7 @@
 export default function AlunoScreen() {
     return(
         <>
-            <div className="container">
+            <div className="container-aluno">
                 <div className="row">
                     <div className="col">
                         <h2>Cadastro de Alunos</h2>

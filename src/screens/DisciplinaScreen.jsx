@@ -1,7 +1,7 @@
 export default function DisciplinaScreen() {
     return(
         <>
-            <div className="container-2">
+            <div className="container-disc">
                 <div className="row-2">
                     <div className="col-2">
                         <h2>Cadastro de Disciplinas</h2>
