@@ -1,66 +1,66 @@
 import { useState } from "react"
-import styles from "./Global.module.css"
-import ListaAlunos from "./ListaAlunos";
-import { useAlunos } from "./Context";
+import styles from "../css/Global.module.css"
+import ListaAlunos from "./ListaAlunos"
+import { useAlunos } from "../routes/Context"
 
 export default function AlunoScreen() {
-    const { alunos, adicionarAluno} = useAlunos();
+    const { alunos, adicionarAluno } = useAlunos()
     const [formData, setFormData] = useState({
         nome: "",
         idade: "",
         email: "",
         date: "",
         telefone: "",
-    });
+    })
 
-    const [cadastrado, setCadastrado] = useState(false);
-    const [editMode, setEditMode] = useState(false);
+    const [cadastrado, setCadastrado] = useState(false)
+    const [editMode, setEditMode] = useState(false)
 
     const handleChange = (e) => {
-        const { id, value } = e.target;
+        const { id, value } = e.target
         setFormData((prevData) => ({
             ...prevData,
             [id]: value,
-        }));
-    };
+        }))
+    }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
-        adicionarAluno(formData);
-        setCadastrado(true);
-    };
+        adicionarAluno(formData)
+        setCadastrado(true)
+    }
 
     const handleEdit = () => {
-        setEditMode(true);
+        setEditMode(true)
     }
 
     const handleUpdate = () => {
-        setCadastrado(true);
-        setEditMode(false);
+        setCadastrado(true)
+        setEditMode(false)
     }
 
     const handleCancel = () => {
-        setEditMode(false);
+        setEditMode(false)
         setFormData({
             nome: "",
             idade: "",
-            email: "", 
+            email: "",
             date: "",
             telefone: "",
-        });
+        })
     }
 
     const handleDelete = () => {
-        setCadastrado(false);
-        setEditMode(false);
+        setCadastrado(false)
+        setEditMode(false)
         setFormData({
             nome: "",
             idade: "",
-            email: "", 
+            email: "",
             date: "",
             telefone: "",
-        });
+        })
     }
 
     return (
@@ -215,6 +215,6 @@ export default function AlunoScreen() {
                 </div>
             )}
         </div>
-        
-    );
+
+    )
 }

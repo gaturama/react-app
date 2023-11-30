@@ -1,6 +1,6 @@
 import React from "react";
-import styles from './Global.module.css';
-import { useAlunos } from "./Context";
+import styles from '../css/Global.module.css';
+import { useAlunos } from "../routes/Context";
 
 const AlunoCard = ({ aluno }) => {
     return (

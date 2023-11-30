@@ -1,4 +1,4 @@
-import styles from './Home.module.css';
+import styles from '../css/Home.module.css';
 import TexasLogo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
