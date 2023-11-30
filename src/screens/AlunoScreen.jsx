@@ -1,6 +1,5 @@
 import { useState } from "react"
 import styles from "../css/Global.module.css"
-import ListaAlunos from "./ListaAlunos"
 import { useAlunos } from "../routes/Context"
 
 export default function AlunoScreen() {
@@ -65,7 +64,6 @@ export default function AlunoScreen() {
 
     return (
         <div>
-            <ListaAlunos alunos={alunos} />
             {cadastrado ? (
                 <div className={`${styles.card} ${styles.cadastrado}`}>
                     <h2 style={{ color: "white" }}>
