@@ -11,7 +11,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1900px;
+    max-width: 1900px;
 }
 
 .logo {
@@ -54,4 +54,15 @@ header {
     justify-content: space-between;
     height: 100%;
     width: 100px;
+}
+
+.carousel {
+    width: 100%;
+    /* overflow: hidden; */
+
+}
+
+.carousel img{
+    /* width: 100%; */
+    /* height: auto; */
 }

@@ -39,8 +39,10 @@ label{
 }
 
 .card {
-    max-width: 400px;
+    width: 400px;
+    height: auto;
     margin: 0 auto;
+    margin-top: 100px;
     background-color: #1c1c1e;
     border-radius: 8px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
