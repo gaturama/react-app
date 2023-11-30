@@ -1,9 +1,8 @@
-import styles from './Home.module.css'
-import TexasLogo from '../assets/images/logo.png'
-import { Link } from 'react-router-dom'
-import 'bootstrap/dist/js/bootstrap.bundle';
-// import { Carousel, Image } from 'bootstrap/dist/js/bootstrap.bundle';
-// import { Image } from 'react-bootstrap';
+import styles from './Home.module.css';
+import TexasLogo from '../assets/images/logo.png';
+import { Link } from 'react-router-dom';
+import { Carousel } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function HomeScreen() {
     return (
@@ -17,6 +16,7 @@ export default function HomeScreen() {
                         <li><Link to="/professor">Professor</Link></li>
                         <li><Link to="/aluno">Aluno</Link></li>
                         <li><Link to="/disciplina">Disciplina</Link></li>
+                        {/* <li><Link to="/lista-alunos">Lista de Alunos</Link></li> */}
                     </ul>
                 </nav>
                 <div className={styles.redes}>
@@ -25,20 +25,31 @@ export default function HomeScreen() {
                     </svg>
                 </div>
             </header>
-            {/* <Carousel>
-                <Image src='https://picsum.photos/1920/400' />
-                <Carousel.Caption>
-                    <h3>Slide 1</h3>
-                </Carousel.Caption>
-                <Image src='https://picsum.photos/1920/400' />
-                <Carousel.Caption>
-                    <h3>Slide 1</h3>
-                </Carousel.Caption>
-                <Image src='https://picsum.photos/1920/400' />
-                <Carousel.Caption>
-                    <h3>Slide 1</h3>
-                </Carousel.Caption>
-            </Carousel> */}
+            <div className={styles['carousel-container']}>
+                <Carousel>
+                    <Carousel.Item>
+                        <img src='https://picsum.photos/1920/400' alt="Slide 1" />
+                        <Carousel.Caption>
+                            <h3>Slide 1</h3>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img src='https://picsum.photos/1920/400' alt="Slide 2" />
+                        <Carousel.Caption>
+                            <h3>Slide 2</h3>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img src='https://picsum.photos/1920/400' alt="Slide 3" />
+                        <Carousel.Caption>
+                            <h3>Slide 3</h3>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </div>
+            <footer className={styles.footer}>
+                
+            </footer>
         </>
     )
 }

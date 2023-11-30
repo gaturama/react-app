@@ -23,22 +23,7 @@ label{
     border-radius: 4px;
 }
 
-.btn-success {
-    background-color: #28a745;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-.btn-success:hover {
-    background-color: #218838;
-}
-
-.card {
+.card, .listaCard{
     width: 400px;
     height: auto;
     margin: 0 auto;
@@ -47,4 +32,38 @@ label{
     border-radius: 8px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+.card:hover {
+    background-color: #252526;
+}
+
+.cadastrado {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: #28a745;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: white
+}
+
+.btn-success, .btn-secondary, .btn-danger {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.btn-success:hover, .btn-secondary:hover, .btn-danger:hover {
+    background-color: #218838;
 }
