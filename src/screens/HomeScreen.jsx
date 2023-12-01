@@ -19,6 +19,7 @@ export default function HomeScreen() {
                         <li><Link to="/professor">Professor</Link></li>
                         <li><Link to="/aluno">Aluno</Link></li>
                         <li><Link to="/disciplina">Disciplina</Link></li>
+                        {/* <li><Link to="/lista-alunos">Lista</Link></li> */}
                     </ul>
                 </nav>
                 <div className={styles.redes}>

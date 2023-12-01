@@ -3,7 +3,7 @@ import styles from "../css/Global.module.css"
 import { useAlunos } from "../routes/Context"
 
 export default function AlunoScreen() {
-    const { alunos, adicionarAluno } = useAlunos()
+    const { adicionarAluno, atualizarAluno, excluirAluno } = useAlunos()
     const [formData, setFormData] = useState({
         nome: "",
         idade: "",
@@ -23,18 +23,25 @@ export default function AlunoScreen() {
         }))
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
-        adicionarAluno(formData)
-        setCadastrado(true)
+        if (editMode) {
+            await atualizarAluno(formData);
+            setCadastrado(true);
+            setEditMode(false);
+          } else {
+            adicionarAluno(formData);
+            setCadastrado(true);
+          }
     }
 
     const handleEdit = () => {
-        setEditMode(true)
-    }
+        setEditMode(true);
+      };
 
-    const handleUpdate = () => {
+    const handleUpdate = async () => {
+        await atualizarAluno(formData)
         setCadastrado(true)
         setEditMode(false)
     }
@@ -50,7 +57,8 @@ export default function AlunoScreen() {
         })
     }
 
-    const handleDelete = () => {
+    const handleDelete = async () => {
+        await excluirAluno(formData.id)
         setCadastrado(false)
         setEditMode(false)
         setFormData({
@@ -107,7 +115,7 @@ export default function AlunoScreen() {
                                     type="date"
                                     className="form-control"
                                     id="date"
-                                    value={formData.email}
+                                    value={formData.date}
                                     onChange={handleChange}
                                 />
                             </div>
@@ -192,7 +200,7 @@ export default function AlunoScreen() {
                                 type="date"
                                 className="form-control"
                                 id="date"
-                                value={formData.email}
+                                value={formData.date}
                                 onChange={handleChange}
                             />
                         </div>
@@ -207,7 +215,9 @@ export default function AlunoScreen() {
                             />
                         </div>
                         <div className={styles.group}>
-                            <input type="submit" className={styles["btn-success"]} />
+                            <button type="submit" className={styles["btn-success"]}>
+                                {editMode ? "Atualizar" : "Cadastrar"}
+                            </button>
                         </div>
                     </form>
                 </div>

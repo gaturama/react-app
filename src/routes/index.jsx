@@ -4,12 +4,14 @@ import AlunoScreen from './../screens/AlunoScreen'
 import DisciplinaScreen from './../screens/DisciplinaScreen'
 import ProfessorScreen from './../screens/ProfessorScreen'
 import { Container } from "react-bootstrap"
+import LoginScreen from './../screens/LoginScreen';
 
 export default function RootNavegation() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<HomeScreen />}/>
+                <Route path="/login" element={<LoginScreen />}/>
                 <Route path="/aluno" element={<AlunoScreen />}/>
                 <Route path="/disciplina" element={<DisciplinaScreen />}/>
                 <Route path="/professor" element={<ProfessorScreen />}/>

@@ -16,11 +16,26 @@ const AlunoCard = ({ aluno }) => {
 
 const ListaAlunos = ({}) => {
     const { alunos } = useAlunos();
+    const [alunosFromDatabase, setAlunosFromDatabase] = useState([]);
+
+    useEffect(() => {
+        const fetchAlunos = async () => {
+          try {
+            const response = await fetch('http://localhost:3001/alunos');
+            const data = await response.json();
+            setAlunosFromDatabase(data);
+          } catch (error) {
+            console.error('Erro ao obter alunos do servidor:', error);
+          }
+        };
+    
+        fetchAlunos();
+      }, []);
     
     return (
         <div>
             <h2 style={{ color: 'white' }}>Lista de Alunos</h2>
-            {alunos.map((aluno) => (
+            {alunosFromDatabase.map((aluno) => (
                 <AlunoCard key={aluno.id} aluno={aluno} />
             ))}
         </div>
