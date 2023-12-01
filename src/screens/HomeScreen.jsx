@@ -55,7 +55,7 @@ export default function HomeScreen() {
 
                 <br />Sheriff Thornton, affectionately known as "Sheriff Bob" by the students, continued to play an active role in Lone Creek Academy over the years. His initial vision of providing quality educational opportunities became a reality, and the school became a cornerstone in the Lone Creek community.<br />
 
-                <br />Today, Lone Creek Academy celebrates decades of success, shaping not only well-educated students but citizens committed to the values that have shaped Texas history. Sheriff Thornton's legacy lives on not only within the school's walls but in the hearts of those who have walked its corridors, carrying with them the pride of being products of Lone Creek Academy.</p>
+                <br />Today, Lone Creek Academy celebrates decades of success, shaping not only well-educated students but citizens committed to the values that have shaped Texas history. Sheriff Thornton's legacy lives on not only within the school's walls but in the hearts of those who have walked its corridors, carrying with them the pride of being products of Lone Creek Academy.<br/></p>
             </div>
             <footer className={styles.footer}>
             </footer>
