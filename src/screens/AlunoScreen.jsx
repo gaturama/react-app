@@ -30,15 +30,15 @@ export default function AlunoScreen() {
             await atualizarAluno(formData);
             setCadastrado(true);
             setEditMode(false);
-          } else {
+        } else {
             adicionarAluno(formData);
             setCadastrado(true);
-          }
+        }
     }
 
     const handleEdit = () => {
         setEditMode(true);
-      };
+    };
 
     const handleUpdate = async () => {
         await atualizarAluno(formData)
